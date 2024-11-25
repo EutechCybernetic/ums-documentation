@@ -118,12 +118,11 @@ In addition you need to specify what meters this virtual meter derives its data 
 
 Using the example above - `F1 - U1 - U2`, you would add the following 3 meters and corresponding scaling factor:
 
-
 | Meter | Scaling Factor|
--------------------------
-|   F1  |       1       |
-|   U1  |      -1       |
-|   U2  |      -1       |
+|------|-------|
+| F1 |  1 |
+| U1 | -1 |
+| U2 | -1 |
 
 
 
