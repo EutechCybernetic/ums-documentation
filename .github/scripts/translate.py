@@ -127,7 +127,25 @@ def main():
         # Only commit if there are changes
         if thai_repo.git.status('--porcelain'):
             thai_repo.git.commit('-m', 'Update Thai translation')
-            thai_repo.git.push()
+            
+            # Check if the branch exists remotely
+            try:
+                # Try to get remote branches
+                remote_branches = [ref.name for ref in thai_repo.remote().refs]
+                current_branch = thai_repo.active_branch.name
+                remote_branch = f'origin/{current_branch}'
+                
+                # If branch doesn't exist remotely, we need to set upstream
+                if remote_branch not in remote_branches:
+                    print(f"Branch '{current_branch}' doesn't exist in remote. Creating it...")
+                    thai_repo.git.push('--set-upstream', 'origin', current_branch)
+                else:
+                    thai_repo.git.push()
+            except Exception as branch_err:
+                print(f"Error checking remote branches: {branch_err}")
+                # Fallback: try push with --set-upstream
+                thai_repo.git.push('--set-upstream', 'origin', thai_repo.active_branch.name)
+                
             print('Changes committed and pushed to destination repository.')
         else:
             print('No changes to commit.')
