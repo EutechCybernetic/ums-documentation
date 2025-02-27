@@ -3,9 +3,6 @@ name: Translate Repository to Thai
 on:
   # Manually trigger the workflow
   workflow_dispatch:
-  # Or schedule it (e.g., daily at midnight UTC)
-  schedule:
-    - cron: '0 0 * * *'
 
 jobs:
   translate:
