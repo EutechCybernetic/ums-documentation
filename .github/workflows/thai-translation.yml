@@ -3,6 +3,9 @@ name: Translate Repository to Thai
 on:
   # Manually trigger the workflow
   workflow_dispatch:
+  # Or schedule it (e.g., daily at midnight UTC)
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   translate:
@@ -29,12 +32,12 @@ jobs:
           repository: ${{ github.repository_owner }}/ums-documentation-thai
           path: thai-repo
           token: ${{ secrets.DEST_REPO_PAT }}
-
-      - name: Run translation script
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          
+      - name: Create translation script
         run: |
-          python -c "
+          mkdir -p scripts
+          cat > scripts/translate.py << 'EOF'
+#!/usr/bin/env python3
 import os
 import openai
 import glob
@@ -140,10 +143,18 @@ thai_repo.git.commit('-m', 'Update Thai translation')
 thai_repo.git.push()
 
 print('Translation complete and pushed to destination repository.')
-          "
+EOF
+
+      - name: Run translation script
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          chmod +x scripts/translate.py
+          python scripts/translate.py
 
       - name: Cleanup
         if: always()
         run: |
           rm -rf source-repo
           rm -rf thai-repo
+          rm -rf scripts
