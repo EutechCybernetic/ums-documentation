@@ -7,9 +7,10 @@ import git
 from pathlib import Path
 import time
 import shutil
+from openai import OpenAI
 
 # Set up OpenAI client
-openai.api_key = os.environ['OPENAI_API_KEY']
+client = OpenAI(api_key=os.environ['OPENAI_API_KEY'])
 
 # Define paths
 source_dir = 'source-repo'
@@ -68,7 +69,7 @@ def translate_text(text):
         return text
         
     try:
-        response = openai.ChatCompletion.create(
+        response = client.chat.completions.create(
             model='gpt-4',
             messages=[
                 {'role': 'system', 'content': 'You are a professional translator. Translate the following content from English to Thai. Preserve all formatting, code structure, and special characters.'},
