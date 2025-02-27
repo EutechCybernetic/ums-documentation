@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install openai pyyaml gitpython
+          pip install openai>=1.0.0 pyyaml gitpython
 
       - name: Check out destination repository
         uses: actions/checkout@v3
