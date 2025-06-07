@@ -316,3 +316,41 @@ In this case, the top level tag we have chosen to filter by has  4 sub tags:  ca
 So 4 groups will be defined.
 
 <figure><img src="../.gitbook/assets/Screenshot 2025-01-30 at 17.25.31.png" alt=""><figcaption></figcaption></figure>
+
+
+
+## Sorting by consumption
+
+If you want to see which meters/tags/groups/etc.. had the highest or lowest consumption relative to others, you can use the 'Sort By Consumption' feature.
+
+This section is at the bottom of the sidebar as shown below:
+
+<figure><img src="../.gitbook/assets/image.png" alt="" width="375"><figcaption></figcaption></figure>
+
+
+
+This feature lets you arrange the visualization to show items  ordered by their consumption values.
+
+'Items' refers to either meters, virtual meters, meter groups or tags.
+
+{% hint style="info" %}
+This feature only makes sense if you are analyzing more than one item. If you are only seeing data for one tag or one meter, you can't really sort as there will only be one item in the list.
+{% endhint %}
+
+
+
+To use this feature, either add multiple items (See the [#comparing-multiple-items](consumption-analysis-tool.md#comparing-multiple-items "mention") section) or select a tag and enable tag grouping. (see )
+
+When you choose to sort in  ascending order ,the chart will show the item with the lowest consumption first and the highest consumption last.
+
+{% hint style="info" %}
+The sort option only makes sense with bar charts (where items are sorted left to right) or tables (where items are sorted top to bottom). It doesn't make sense for line charts or donut charts
+{% endhint %}
+
+When you enable sorting you can also limit how many items to show. With this, you can setup a visualization that shows 'Top 5 Meters' or 'Bottom 5 Equipment Types' for consumption.
+
+
+
+Depending on how you have setup the rest of the filters, each item may have multiple bars (for example, if you have setup daily grouping and are viewing multiple days).
+
+When the sorting function is enabled, all bars for the same item will be summed together and shown as one item.

@@ -8,7 +8,7 @@ The consumption contribution tool allows you to see how consumption for a virtua
 
 You can access it by going ot the consumption analysis tool for a specific virtual meter or group and clicking the 'View Contributions' button at the bottom.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 This will open up the contributions interface.
 

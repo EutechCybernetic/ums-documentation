@@ -8,7 +8,7 @@ You can view the consumption trend for meters across the last 24 hours or 30 day
 
 The meter explorer looks like this:
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 These are the components of it:
 

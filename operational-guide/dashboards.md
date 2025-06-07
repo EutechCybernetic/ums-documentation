@@ -68,7 +68,7 @@ It shows the total consumption for the given time period and location for each u
 
 There 2 variations of the utility baseline comparison widget but they both work the same way.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 Use the location filter to choose the location that you wish to see comparison data for. You would generally pick a building or site here.
 

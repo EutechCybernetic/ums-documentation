@@ -37,4 +37,6 @@
   * [Consumption Analysis Tool](operational-guide/consumption-analysis-tool.md)
   * [Consumption Contribution Tool](operational-guide/consumption-contribution-tool.md)
 * [User Permissions](user-permissions.md)
-* [Integrations](integrations.md)
+* [Integrations](integrations/README.md)
+  * [Understanding data collection types](integrations/understanding-data-collection-types.md)
+  * [Integration with IBMS](integrations/integration-with-ibms.md)
