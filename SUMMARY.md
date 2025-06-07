@@ -40,3 +40,4 @@
 * [Integrations](integrations/README.md)
   * [Understanding data collection types](integrations/understanding-data-collection-types.md)
   * [Integration with IBMS](integrations/integration-with-ibms.md)
+  * [Making a custom integration](integrations/making-a-custom-integration.md)

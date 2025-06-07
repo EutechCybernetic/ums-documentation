@@ -1,6 +1,6 @@
 # Integrations
 
-Integartions allow you to sync meter configuration and meter data from 3rd party sources.
+Integrations allow you to sync meter configuration and meter data from 3rd party sources.
 
 UMS has built-in integrations to acquire data and configuration via the iviva IBMS application.
 
